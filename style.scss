@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+$clY: #FBD784;
+
+body{
+    background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
+    background:url(./images/BGHero.png) no-repeat;
+    background:url(./images/bodyImg.png) no-repeat;
+    background:url(./images/VG.png) no-repeat;
+    background-size: cover;
+}
+.conteiner{
+    width: 1170px;
+    margin: 0 auto;
+    .header__menu{
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .menu__item a{
+            color: #000;
+            text-decoration: none;
+            margin-right: 40px;
+            &:last-child{
+                margin-right: 0;
+            }   
+        }
+    }
+    .header__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 0;
+        .header__content-social{
+            transform: rotate(90deg);
+        }
+        .header__content-text{
+            display: flex;
+            flex-direction: column;
+            font-style: normal;
+            position: relative;
+            font-weight: 600;
+            font-size: 28px;
+            width: 600px;
+            & :before{
+                content: 'Путеводитель';
+                position: absolute;
+                width: 70px;
+                height: 2px;
+                top: -20px;
+                left: 0;
+                background: $clY;
+                color: $clY;
+                font-size: 20px;
+            }
+            &:after{
+                content: 'Крути вниз';
+                bottom: 0;
+                left: 0;
+                font-size: 15px;
+            }
+        }
+        .header__content-navigate{
+
+        }
+    }
+}
