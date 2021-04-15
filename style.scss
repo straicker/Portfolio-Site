@@ -34,8 +34,15 @@ body{
         justify-content: space-between;
         align-items: center;
         padding: 100px 0;
+        margin: 0;
+        border: 1px solid red;
         .header__content-social{
-            transform: rotate(90deg);
+            text-align: left;
+            transform: rotate(90deg) translate(-10px, 0%);
+            margin-left: -50px;
+            & i{
+                transform: rotate(-90deg);
+            }
         }
         .header__content-text{
             display: flex;
@@ -68,3 +75,4 @@ body{
         }
     }
 }
+
