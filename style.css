@@ -1,14 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
   background: url(./images/VG.png) no-repeat;
   background: url(./images/BGHero.png) no-repeat;
+  background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
   background: url(./images/bodyImg.png) no-repeat;
-  background-size: cover;
+  opacity: 1;
+  object-fit: cover;
+}
+
+.content {
+  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
 }
 
 .conteiner {
@@ -17,13 +23,21 @@ body {
 }
 
 .conteiner .header__menu {
+  font-family: 'Ubuntu Mono', monospace;
   padding: 40px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.conteiner .header__menu .logo a {
+  font-size: 30px;
+  text-decoration: none;
+  color: #fff;
+}
+
 .conteiner .header__menu .menu__item a {
+  font-family: 'Lato', sans-serif;
   color: #000;
   text-decoration: none;
   margin-right: 40px;
@@ -59,6 +73,7 @@ body {
 }
 
 .conteiner .header__content .header__content-text {
+  font-family: 'Lato';
   display: flex;
   flex-direction: column;
   font-style: normal;
@@ -71,8 +86,10 @@ body {
 .conteiner .header__content .header__content-text span {
   display: flex;
   position: relative;
-  padding-left: 80px;
+  padding-left: 70px;
   color: #FBD784;
+  font-size: 20px;
+  font-family: 'Ubuntu Mono', sans-serif;
 }
 
 .conteiner .header__content .header__content-text span:before {
@@ -98,4 +115,108 @@ body {
   margin-top: 10px;
   text-decoration: none;
   color: #000;
+}
+
+.travel__content {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 300px;
+  color: #fff;
+}
+
+.travel__content .travel__content-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.travel__content .travel__content-block:last-child {
+  padding: 100px 0;
+}
+
+.travel__content .travel__content-block .travel__text {
+  position: relative;
+  width: 450px;
+  height: 160px;
+}
+
+.travel__content .travel__content-block .travel__text span {
+  display: flex;
+  position: relative;
+  padding-left: 70px;
+  color: #FBD784;
+  font-size: 20px;
+  font-family: 'Ubuntu Mono', sans-serif;
+}
+
+.travel__content .travel__content-block .travel__text span:before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  background: #FBD784;
+  color: #FBD784;
+  font-size: 20px;
+}
+
+.travel__content .travel__content-block .travel__text .travelNum {
+  width: 150px;
+  position: absolute;
+  left: -15%;
+  top: -30%;
+}
+
+.travel__content .travel__content-block .travel__text h1 {
+  margin-top: 15px;
+  font-size: 40px;
+}
+
+.travel__content .travel__content-block .travel__text p {
+  font-family: 'Ubuntu Mono', sans-serif;
+  margin-top: 20px;
+}
+
+.travel__content .travel__content-block .travel__content-img img {
+  background-size: cover;
+  width: 400px;
+  height: 500px;
+}
+
+footer {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 70px;
+}
+
+footer .footer__logo {
+  color: #fff;
+  width: 300px;
+}
+
+footer .footer__menu {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  color: #FBD784;
+}
+
+footer .footer__menu a {
+  margin-top: 15px;
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .footer__menu .footer__menu-col1 {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .footer__menu .footer__menu-col2 {
+  display: flex;
+  flex-direction: column;
 }
