@@ -34,7 +34,6 @@ body{
     background:url(./images/BGHero.png) no-repeat;
     background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
     background:url(./images/bodyImg.png) no-repeat;
-    opacity: 1;
     object-fit: cover;
 }
 .content{
@@ -110,7 +109,7 @@ body{
     }
 }
 .travel__content{
-    width: 1000px;
+    width: 1024px;
     margin: 0 auto;
     padding-top: 300px;
     color: #fff;
@@ -152,7 +151,7 @@ body{
     }
 }
 footer{
-    width: 1000px;
+    width: 1024px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -178,6 +177,176 @@ footer{
         .footer__menu-col2{
             display: flex;
             flex-direction: column;
+        }
+    }
+}
+@media(max-width: 1280px){
+    .content{
+        width: 100%;
+        margin: 0 auto;
+        .conteiner{
+            width: 1000px;
+            margin: 0 auto;
+            .header__menu{
+                padding: 60px 0;
+            }
+        }
+        .travel__content{
+            width: 970px;
+            margin: 0 auto;
+            .travel__content-block{
+                &:last-child{
+                    padding: 100px 0;
+                }
+                .travel__text{
+                    width: 400px;
+                    @include tText;
+                    .travelNum{
+                        left: -10%;
+                        top: -30%;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media(max-width: 1024px){
+    .content{
+
+        .conteiner{
+            width: 960px;
+            margin: 0 auto;
+            .header__menu{
+                padding: 60px 0;
+            }
+        }
+        .travel__content{
+            width: 970px;
+            margin: 0 auto;
+            .travel__content-block{
+                &:last-child{
+                    padding: 100px 0;
+                }
+                .travel__text{
+                    @include tText;
+                    .travelNum{
+                        left: -10%;
+                        top: -30%;
+                    }
+                }
+            }
+        }
+        footer{
+            width: 930px;
+            margin: 0 auto;
+            .footer__logo{
+                color: #fff;
+                width: 300px;
+            }
+            .footer__menu{
+                display: flex;
+                justify-content: space-between;
+                width: 400px;
+                color: $clY;
+                & a{
+                    margin-top: 15px;
+                    text-decoration: none;
+                    color: #fff;
+                }
+                .footer__menu-col1{
+                    display: flex;
+                    flex-direction: column;
+                }
+                .footer__menu-col2{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 768px){
+    .conteiner{
+        padding:0 60px;
+        .header__menu{
+            width: 680px;
+            .logo a{
+                font-size: 40px;
+            }
+            .menu__item a{
+                font-size: 20px;
+            }
+            .login a{
+                font-size: 20px;
+                
+            }
+        }
+        .header__content{
+            width: 680px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 0;
+            margin: 0;
+            .header__content-social{
+                display: flex;
+                font-size: 20px;
+            }
+            .header__content-text{
+            }
+            .header__content-navigate{
+                font-size: 20px;
+            }
+        }
+    }
+    .travel__content{
+        display: flex;
+        align-items: center;
+        width: 680px;
+        margin: 0 auto;
+        .travel__content-block{
+            flex-direction: column;
+            margin-top: 100px;
+            &:last-child{
+                padding: 100px 0;
+            }
+            .travel__content-img{
+                & img{
+                    background-size: cover;
+                    width: 400px;
+                    height: 500px;
+                }
+            }
+        }
+    }
+    footer{
+        width: 680px;
+        margin: 0 auto;
+        .footer__logo{
+            color: #fff;
+            width: 300px;
+        }
+        .footer__menu{
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            color: $clY;
+            & a{
+                margin-top: 15px;
+                text-decoration: none;
+                color: #fff;
+            }
+            .footer__menu-col1{
+                display: flex;
+                flex-direction: column;
+            }
+            .footer__menu-col2{
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+            }
         }
     }
 }
