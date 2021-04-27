@@ -29,19 +29,23 @@
 }
 $clY: #FBD784;
 
-body{
-    background:url(./images/VG.png) no-repeat;
-    background:url(./images/BGHero.png) no-repeat;
-    background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
-    background:url(./images/bodyImg.png) no-repeat;
-    object-fit: cover;
-}
+
 .content{
+    width: 100%;
+    margin: 0 auto;
     background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
+}
+header{
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
+    background:url(./images/gori.jpg) no-repeat;
+    width: 100%;
+    background-size: cover;
+    height: 100%;
 }
 .conteiner{
     width: 1170px;
     margin: 0 auto;
+    padding-bottom: 300px;
     .header__menu{
         font-family: 'Ubuntu Mono', monospace;
         padding: 40px 0;
@@ -51,7 +55,7 @@ body{
         .logo a{
             font-size: 30px;
             text-decoration: none;
-            color: #fff;
+            color: #000;
         }
         .menu__item a{
             font-family: 'Lato', sans-serif;
@@ -60,13 +64,18 @@ body{
             margin-right: 40px;
             &:last-child{
                 margin-right: 0;
-            }   
+            }
+            &:hover{
+                text-decoration: underline;
+            }  
         }
         .login a{
             color: #000;
             text-decoration: none;
             margin-left: 10px;
-            
+            &:hover{
+                text-decoration: underline;
+            }
         }
     }
     .header__content{
@@ -75,6 +84,7 @@ body{
         align-items: center;
         padding: 100px 0;
         margin: 0;
+        color: #000;
         .header__content-social{
             text-align: left;
             transform: rotate(90deg) translate(-10px, 0%);
@@ -82,6 +92,8 @@ body{
             .fab{
                 transform: rotate(-90deg);
                 margin-left: 20px;
+                font-size: 20px;
+                color: #000;
             }
         }
         .header__content-text{
@@ -99,11 +111,13 @@ body{
            display: flex;
            flex-direction: column;
            text-align: right;
-           padding: 10px 20px;
            & a{
             margin-top: 10px;
             text-decoration: none;
             color: #000;
+            &:hover{
+                text-decoration: underline;
+            } 
            }
         }
     }
@@ -111,7 +125,6 @@ body{
 .travel__content{
     width: 1024px;
     margin: 0 auto;
-    padding-top: 300px;
     color: #fff;
     .travel__content-block{
         display: flex;
@@ -124,13 +137,12 @@ body{
         .travel__text{
             position: relative;
             width: 450px;
-            height: 160px;
             @include tText;
             .travelNum{
                 width: 150px;
                 position: absolute;
                 left: -15%;
-                top: -30%;
+                top: -25%;
             }
             & h1{
                 margin-top: 15px;
@@ -169,6 +181,9 @@ footer{
             margin-top: 15px;
             text-decoration: none;
             color: #fff;
+            &:hover{
+                text-decoration: underline;
+            } 
         }
         .footer__menu-col1{
             display: flex;
@@ -213,16 +228,28 @@ footer{
 }
 @media(max-width: 1024px){
     .content{
-
+        width: 100%;
+        margin: 0 auto;
         .conteiner{
-            width: 960px;
+            width: 770px;
             margin: 0 auto;
             .header__menu{
                 padding: 60px 0;
             }
+            .header__content-social{
+                text-align: left;
+                transform: rotate(90deg) translate(-10px, 0%);
+                margin-left: -50px;
+                .fab{
+                    transform: rotate(-90deg);
+                    margin-left: 20px;
+                    font-size: 18px;
+                    color: #000;
+                }
+            }
         }
         .travel__content{
-            width: 970px;
+            width: 770px;
             margin: 0 auto;
             .travel__content-block{
                 &:last-child{
@@ -231,14 +258,21 @@ footer{
                 .travel__text{
                     @include tText;
                     .travelNum{
-                        left: -10%;
+                        left: 0;
                         top: -30%;
+                    }
+                }
+                .travel__content-img{
+                    & img{
+                        background-size: cover;
+                        width: 300px;
+                        height: 400px;
                     }
                 }
             }
         }
         footer{
-            width: 930px;
+            width: 770px;
             margin: 0 auto;
             .footer__logo{
                 color: #fff;
@@ -267,85 +301,119 @@ footer{
     }
 }
 @media(max-width: 768px){
-    .conteiner{
-        padding:0 60px;
-        .header__menu{
-            width: 680px;
-            .logo a{
-                font-size: 40px;
-            }
-            .menu__item a{
-                font-size: 20px;
-            }
-            .login a{
-                font-size: 20px;
-                
-            }
-        }
-        .header__content{
-            width: 680px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 100px 0;
-            margin: 0;
-            .header__content-social{
-                display: flex;
-                font-size: 20px;
-            }
-            .header__content-text{
-            }
-            .header__content-navigate{
-                font-size: 20px;
-            }
-        }
-    }
-    .travel__content{
-        display: flex;
-        align-items: center;
-        width: 680px;
+    .content{
+        font-size: 18px;
+        width: 768px;
         margin: 0 auto;
-        .travel__content-block{
-            flex-direction: column;
-            margin-top: 100px;
-            &:last-child{
-                padding: 100px 0;
+        background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
+        .conteiner{
+            width: 768px;
+            margin: 0 auto;
+            .header__menu{
+                width: 700px;
+                margin: 0 auto;
+                .logo a{
+                    font-size: 40px;
+                }
+                .menu__item a{
+                    font-size: 20px;
+                }
+                .login a{
+                    font-size: 20px;
+                }
             }
-            .travel__content-img{
-                & img{
-                    background-size: cover;
-                    width: 400px;
-                    height: 500px;
+            .header__content{
+                width: 700px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 100px 30px;
+                margin: 0;
+                .header__content-social{
+                    display: flex;
+                    font-size: 20px;
+                    margin-right: 0;
+                }
+                .header__content-navigate{
+                    font-size: 20px;
                 }
             }
         }
-    }
-    footer{
-        width: 680px;
-        margin: 0 auto;
-        .footer__logo{
-            color: #fff;
-            width: 300px;
+        .travel__content{
+            width: 700px;
+            margin: 0 auto;
+            padding: 50px 0;
+            .travel__content-block{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                position: relative;
+                margin-top: 100px;
+                &:last-child{
+                    padding: 0;
+                }
+                .travel__text{
+                    position: absolute;
+                    width: 450px;
+                    @include tText;
+                    .travelNum{
+                        width: 150px;
+                        position: absolute;
+                        left: -15%;
+                        top: -10%;
+                    }
+                    & :last-child{
+                        padding-bottom: 300px;
+                    }
+                    & h1{
+                        margin-top: 15px;
+                        font-size: 40px;
+                    }
+                    & p{
+                        font-family: 'Ubuntu Mono', sans-serif;
+                        margin-top: 20px;
+                    }
+                }
+                .travel__content-img{
+                    margin-top: 300px;
+                    & img{
+                        background-size: cover;
+                        width: 400px;
+                        height: 500px;
+                    }
+                }
+            }
         }
-        .footer__menu{
+        footer{
+            width: 700px;
+            margin: 0 auto;
             display: flex;
-            flex-direction: column;
-            width: 400px;
-            color: $clY;
-            & a{
-                margin-top: 15px;
-                text-decoration: none;
+            justify-content: space-between;
+            padding-bottom: 70px;
+            .footer__logo{
                 color: #fff;
+                width: 260px;
             }
-            .footer__menu-col1{
+            .footer__menu{
                 display: flex;
-                flex-direction: column;
-            }
-            .footer__menu-col2{
-                display: flex;
-                flex-direction: column;
-                margin-top: 20px;
+                justify-content: space-between;
+                width: 400px;
+                color: $clY;
+                & a{
+                    margin-top: 15px;
+                    text-decoration: none;
+                    color: #fff;
+                }
+                .footer__menu-col1{
+                    display: flex;
+                    flex-direction: column;
+                }
+                .footer__menu-col2{
+                    display: flex;
+                    flex-direction: column;
+                }
             }
         }
     }

@@ -4,21 +4,24 @@
   padding: 0;
 }
 
-body {
-  background: url(./images/VG.png) no-repeat;
-  background: url(./images/BGHero.png) no-repeat;
-  background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
-  background: url(./images/bodyImg.png) no-repeat;
-  object-fit: cover;
+.content {
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
 }
 
-.content {
+header {
   background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
+  background: url(./images/gori.jpg) no-repeat;
+  width: 100%;
+  background-size: cover;
+  height: 100%;
 }
 
 .conteiner {
   width: 1170px;
   margin: 0 auto;
+  padding-bottom: 300px;
 }
 
 .conteiner .header__menu {
@@ -32,7 +35,7 @@ body {
 .conteiner .header__menu .logo a {
   font-size: 30px;
   text-decoration: none;
-  color: #fff;
+  color: #000;
 }
 
 .conteiner .header__menu .menu__item a {
@@ -46,10 +49,18 @@ body {
   margin-right: 0;
 }
 
+.conteiner .header__menu .menu__item a:hover {
+  text-decoration: underline;
+}
+
 .conteiner .header__menu .login a {
   color: #000;
   text-decoration: none;
   margin-left: 10px;
+}
+
+.conteiner .header__menu .login a:hover {
+  text-decoration: underline;
 }
 
 .conteiner .header__content {
@@ -58,6 +69,7 @@ body {
   align-items: center;
   padding: 100px 0;
   margin: 0;
+  color: #000;
 }
 
 .conteiner .header__content .header__content-social {
@@ -69,6 +81,8 @@ body {
 .conteiner .header__content .header__content-social .fab {
   transform: rotate(-90deg);
   margin-left: 20px;
+  font-size: 20px;
+  color: #000;
 }
 
 .conteiner .header__content .header__content-text {
@@ -107,7 +121,6 @@ body {
   display: flex;
   flex-direction: column;
   text-align: right;
-  padding: 10px 20px;
 }
 
 .conteiner .header__content .header__content-navigate a {
@@ -116,10 +129,13 @@ body {
   color: #000;
 }
 
+.conteiner .header__content .header__content-navigate a:hover {
+  text-decoration: underline;
+}
+
 .travel__content {
   width: 1024px;
   margin: 0 auto;
-  padding-top: 300px;
   color: #fff;
 }
 
@@ -137,7 +153,6 @@ body {
 .travel__content .travel__content-block .travel__text {
   position: relative;
   width: 450px;
-  height: 160px;
 }
 
 .travel__content .travel__content-block .travel__text span {
@@ -165,7 +180,7 @@ body {
   width: 150px;
   position: absolute;
   left: -15%;
-  top: -30%;
+  top: -25%;
 }
 
 .travel__content .travel__content-block .travel__text h1 {
@@ -208,6 +223,10 @@ footer .footer__menu a {
   margin-top: 15px;
   text-decoration: none;
   color: #fff;
+}
+
+footer .footer__menu a:hover {
+  text-decoration: underline;
 }
 
 footer .footer__menu .footer__menu-col1 {
@@ -268,15 +287,30 @@ footer .footer__menu .footer__menu-col2 {
 }
 
 @media (max-width: 1024px) {
+  .content {
+    width: 100%;
+    margin: 0 auto;
+  }
   .content .conteiner {
-    width: 960px;
+    width: 770px;
     margin: 0 auto;
   }
   .content .conteiner .header__menu {
     padding: 60px 0;
   }
+  .content .conteiner .header__content-social {
+    text-align: left;
+    transform: rotate(90deg) translate(-10px, 0%);
+    margin-left: -50px;
+  }
+  .content .conteiner .header__content-social .fab {
+    transform: rotate(-90deg);
+    margin-left: 20px;
+    font-size: 18px;
+    color: #000;
+  }
   .content .travel__content {
-    width: 970px;
+    width: 770px;
     margin: 0 auto;
   }
   .content .travel__content .travel__content-block:last-child {
@@ -302,11 +336,16 @@ footer .footer__menu .footer__menu-col2 {
     font-size: 20px;
   }
   .content .travel__content .travel__content-block .travel__text .travelNum {
-    left: -10%;
+    left: 0;
     top: -30%;
   }
+  .content .travel__content .travel__content-block .travel__content-img img {
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+  }
   .content footer {
-    width: 930px;
+    width: 770px;
     margin: 0 auto;
   }
   .content footer .footer__logo {
@@ -335,81 +374,138 @@ footer .footer__menu .footer__menu-col2 {
 }
 
 @media (max-width: 768px) {
-  .conteiner {
-    padding: 0 60px;
+  .content {
+    font-size: 18px;
+    width: 768px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
   }
-  .conteiner .header__menu {
-    width: 680px;
+  .content .conteiner {
+    width: 768px;
+    margin: 0 auto;
   }
-  .conteiner .header__menu .logo a {
+  .content .conteiner .header__menu {
+    width: 700px;
+    margin: 0 auto;
+  }
+  .content .conteiner .header__menu .logo a {
     font-size: 40px;
   }
-  .conteiner .header__menu .menu__item a {
+  .content .conteiner .header__menu .menu__item a {
     font-size: 20px;
   }
-  .conteiner .header__menu .login a {
+  .content .conteiner .header__menu .login a {
     font-size: 20px;
   }
-  .conteiner .header__content {
-    width: 680px;
+  .content .conteiner .header__content {
+    width: 700px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 100px 0;
+    padding: 100px 30px;
     margin: 0;
   }
-  .conteiner .header__content .header__content-social {
+  .content .conteiner .header__content .header__content-social {
     display: flex;
     font-size: 20px;
+    margin-right: 0;
   }
-  .conteiner .header__content .header__content-navigate {
+  .content .conteiner .header__content .header__content-navigate {
     font-size: 20px;
   }
-  .travel__content {
+  .content .travel__content {
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+  .content .travel__content .travel__content-block {
     display: flex;
     align-items: center;
-    width: 680px;
-    margin: 0 auto;
-  }
-  .travel__content .travel__content-block {
+    justify-content: space-between;
     flex-direction: column;
+    position: relative;
     margin-top: 100px;
   }
-  .travel__content .travel__content-block:last-child {
-    padding: 100px 0;
+  .content .travel__content .travel__content-block:last-child {
+    padding: 0;
   }
-  .travel__content .travel__content-block .travel__content-img img {
+  .content .travel__content .travel__content-block .travel__text {
+    position: absolute;
+    width: 450px;
+  }
+  .content .travel__content .travel__content-block .travel__text span {
+    display: flex;
+    position: relative;
+    padding-left: 70px;
+    color: #FBD784;
+    font-size: 20px;
+    font-family: 'Ubuntu Mono', sans-serif;
+  }
+  .content .travel__content .travel__content-block .travel__text span:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    background: #FBD784;
+    color: #FBD784;
+    font-size: 20px;
+  }
+  .content .travel__content .travel__content-block .travel__text .travelNum {
+    width: 150px;
+    position: absolute;
+    left: -15%;
+    top: -10%;
+  }
+  .content .travel__content .travel__content-block .travel__text :last-child {
+    padding-bottom: 300px;
+  }
+  .content .travel__content .travel__content-block .travel__text h1 {
+    margin-top: 15px;
+    font-size: 40px;
+  }
+  .content .travel__content .travel__content-block .travel__text p {
+    font-family: 'Ubuntu Mono', sans-serif;
+    margin-top: 20px;
+  }
+  .content .travel__content .travel__content-block .travel__content-img {
+    margin-top: 300px;
+  }
+  .content .travel__content .travel__content-block .travel__content-img img {
     background-size: cover;
     width: 400px;
     height: 500px;
   }
-  footer {
-    width: 680px;
+  .content footer {
+    width: 700px;
     margin: 0 auto;
-  }
-  footer .footer__logo {
-    color: #fff;
-    width: 300px;
-  }
-  footer .footer__menu {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 70px;
+  }
+  .content footer .footer__logo {
+    color: #fff;
+    width: 260px;
+  }
+  .content footer .footer__menu {
+    display: flex;
+    justify-content: space-between;
     width: 400px;
     color: #FBD784;
   }
-  footer .footer__menu a {
+  .content footer .footer__menu a {
     margin-top: 15px;
     text-decoration: none;
     color: #fff;
   }
-  footer .footer__menu .footer__menu-col1 {
+  .content footer .footer__menu .footer__menu-col1 {
     display: flex;
     flex-direction: column;
   }
-  footer .footer__menu .footer__menu-col2 {
+  .content footer .footer__menu .footer__menu-col2 {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
   }
 }
